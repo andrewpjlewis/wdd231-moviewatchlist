@@ -19,9 +19,6 @@ export const WatchlistProvider = ({ children }) => {
     // Update the movies list
     const updatedMovies = [...movies, movieWithStatus];
 
-    // Log to check the movie object
-    console.log('Added Movie:', movieWithStatus);
-
     // Update state and localStorage
     setMovies(updatedMovies);
     localStorage.setItem('movies', JSON.stringify(updatedMovies));

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get("movieId");
+
+            if (movieId) {
+                const API_KEY = "YOUR_OMDB_API_KEY";
+                const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`);
+                const movie = await response.json();
+
+                if (movie.Response === "True") {
+                    document.getElementById("title").innerText = movie.Title;
+                    document.getElementById("year").innerText = movie.Year;
+                    document.getElementById("poster").src = movie.Poster;
+                    document.getElementById("plot").innerText = movie.Plot;
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="year"></p>
+    <img id="poster" alt="Movie Poster" />
+    <p id="plot"></p>
+</body>
+</html>

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { WatchlistContext } from "../context/WatchlistContext";
 import MovieItem from "./MovieItem";
+import RecommendedMovies from "./RecommendedMovies";
 
 const MovieList = () => {
   const { movies } = useContext(WatchlistContext);
@@ -17,6 +18,8 @@ const MovieList = () => {
           <p>No movies added yet.</p>
         )}
       </div>
+
+      <RecommendedMovies />
     </div>
   );
 };

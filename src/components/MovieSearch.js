@@ -6,7 +6,7 @@ export const searchMovies = async (query) => {
     
     if (data.Response === "True") {
       console.log('data')
-      return data.Search; // Return the list of search results
+      return data.Search;
     } else {
       throw new Error(`No results found for "${query}"`);
     }
