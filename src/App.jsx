@@ -17,8 +17,8 @@ const App = () => {
           <Route path="/" element={<MovieForm />} />
           <Route path="/watchlist" element={<MovieList />} />
           <Route path="/contact" element={<ContactForm />} />
-          <Route path="/recommended" element={<RecommendedMovies />} /> {/* New: Recommended Movies Page */}
-          <Route path="/movie/:id" element={<MovieDetails />} /> {/* New: Dynamic Movie Details Page */}
+          <Route path="/recommended" element={<RecommendedMovies />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
       </WatchlistProvider>
     </Router>
