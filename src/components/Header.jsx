@@ -2,7 +2,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>My Movie Watchlist</h1>
+        <a href="/">
+          <h1>My Movie Watchlist</h1>
+        </a>
       </div>
       <nav>
         <input type="checkbox" id="menu-toggle" className="menu-toggle" />
